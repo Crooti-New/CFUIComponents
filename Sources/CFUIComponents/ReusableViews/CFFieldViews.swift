@@ -200,9 +200,9 @@ public class CFPhoneNumberViewModel: CFMaskFieldViewModel {
     
     public func validateNumber() {
         switch formatter.status {
-        case .clear: phoneNumberValidator = .error(msg: "enter_phone_number".localized)
+        case .clear: phoneNumberValidator = .error(msg: "error_invalid_phone_number".localized)
         case .complete: phoneNumberValidator = .success
-        case .incomplete: phoneNumberValidator = .error(msg: "fill_in_phone_number".localized)
+        case .incomplete: phoneNumberValidator = .error(msg: "error_invalid_phone_number".localized)
         }
     }
 }
