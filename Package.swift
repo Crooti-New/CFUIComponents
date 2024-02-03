@@ -17,6 +17,7 @@ let package = Package(
     dependencies: [
         .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", from: "3.2.3"),
         .package(name: "Reachability", url: "https://github.com/ashleymills/Reachability.swift", .upToNextMajor(from: "5.1.0")),
+        .package(name: "Kingfisher", url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "7.0.0")),
         .package(name: "Stinsen", url: "https://github.com/cuongfinal/stinsen", .branch("master")),
         .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk.git", from: "9.4.0"),
         // Dependencies declare other packages that this package depends on.
@@ -27,7 +28,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "CFUIComponents",
-            dependencies: ["Lottie", "Reachability", "Stinsen",
+            dependencies: ["Lottie", "Reachability", "Stinsen", "Kingfisher",
                            .product(name: "FirebaseAnalytics", package: "Firebase"),
                            .product(name: "FirebaseCrashlytics", package: "Firebase"),
                            .product(name: "FirebaseRemoteConfig", package: "Firebase")]),
