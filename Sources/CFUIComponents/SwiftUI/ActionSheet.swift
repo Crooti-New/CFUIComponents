@@ -23,7 +23,7 @@ public func actionSheetGenerator<T>(_ title: String,
 
 public func actionSheetGenerator(title: String,
                                  subTitle: String = "",
-                                 confText: String = "btn_yes".localized,
+                                 confText: String = "yes".localized,
                                  confirm: @escaping () -> Void) -> ActionSheet {
     return ActionSheet(title: Text(title),
                        message: Text(subTitle),

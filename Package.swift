@@ -20,6 +20,7 @@ let package = Package(
         .package(name: "Kingfisher", url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "7.0.0")),
         .package(name: "Stinsen", url: "https://github.com/cuongfinal/stinsen", .branch("master")),
         .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk.git", from: "9.4.0"),
+        .package(name: "SlidingTabView", url: "https://github.com/QuynhNguyen/SlidingTabView", .branch("master")),
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -28,7 +29,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "CFUIComponents",
-            dependencies: ["Lottie", "Reachability", "Stinsen", "Kingfisher",
+            dependencies: ["Lottie", "Reachability", "Stinsen", "Kingfisher", "SlidingTabView",
                            .product(name: "FirebaseAnalytics", package: "Firebase"),
                            .product(name: "FirebaseCrashlytics", package: "Firebase"),
                            .product(name: "FirebaseRemoteConfig", package: "Firebase")]),
