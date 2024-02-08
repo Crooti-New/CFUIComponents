@@ -21,6 +21,7 @@ let package = Package(
         .package(name: "Stinsen", url: "https://github.com/cuongfinal/stinsen", .branch("master")),
         .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk.git", from: "9.4.0"),
         .package(name: "SlidingTabView", url: "https://github.com/QuynhNguyen/SlidingTabView", .branch("master")),
+        .package(name: "PinterestLikeGrid", url: "https://github.com/thaisrfernandes/PinterestLikeGrid.git", .branch("main")),
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -30,6 +31,7 @@ let package = Package(
         .target(
             name: "CFUIComponents",
             dependencies: ["Lottie", "Reachability", "Stinsen", "Kingfisher", "SlidingTabView",
+                           "PinterestLikeGrid",
                            .product(name: "FirebaseAnalytics", package: "Firebase"),
                            .product(name: "FirebaseCrashlytics", package: "Firebase"),
                            .product(name: "FirebaseRemoteConfig", package: "Firebase")]),
