@@ -48,6 +48,16 @@ public extension AsyncViewModel {
         }
     }
     
+    func loadWithoutProgress() async {
+        if case .inProgress = self.result { return }
+    
+        do {
+            self.result = .success(try await self.asyncOperation())
+        } catch {
+            self.result = .failure(error)
+        }
+    }
+    
     @MainActor
     func loadIfNeeded() async {
         switch self.result {
